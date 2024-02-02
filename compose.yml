@@ -17,7 +17,7 @@ services:
     ports:
       - "5080:5080"
     volumes:
-      - ./omdata:/opt/omdata
+      - /home/user/project/omdata:/opt/omdata
     environment:
       - OM_KURENTO_WS_URL=ws://kurento:8888/kurento
       - OM_DB_TYPE=postgresql
@@ -44,7 +44,7 @@ services:
   postgresql:
     image: postgres:15-alpine
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - /home/user/project/pgdata:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=openmeetings
       - POSTGRES_PASSWORD=openmeetings
