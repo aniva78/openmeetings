@@ -13,7 +13,7 @@ networks:
 
 services:
   openmeetings:
-    image: apache/openmeetings:min-6.3.0
+    image: apache/openmeetings:min-7.2.0
     ports:
       - "5080:5080"
     volumes:
